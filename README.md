@@ -1,5 +1,5 @@
 
-# 🎬 Movie Recommender App
+# Movie Recommender App
 
 A simple **Movie Recommendation Web App** built with:
 - **Frontend:** React + Tailwind CSS
@@ -17,6 +17,8 @@ A simple **Movie Recommendation Web App** built with:
 ---
 
 ## 📂 Project Structure
+
+```
 movie-recommender/
 │
 ├── backend/
@@ -30,7 +32,7 @@ movie-recommender/
 │   ├── tailwind.config.js
 │
 └── README.md
-
+```
 ---
 
 ### 1️⃣ Clone Repository
