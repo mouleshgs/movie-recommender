@@ -1,8 +1,9 @@
 import pandas as pd
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -35,6 +36,14 @@ def recommend():
     data = request.get_json()
     title = data.get("movie", "").strip()
     return jsonify(recommend_by_content(title))
+
+@app.route("/", defaults={"path": ""})
+@app.route("/<path:path>")
+def serve(path):
+    if path != "" and os.path.exists(app.static_folder + "/" + path):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, "index.html")
 
 if __name__ == "__main__":
     print("✅ Flask server is running on http://127.0.0.1:5000")
