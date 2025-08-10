@@ -16,7 +16,7 @@ function Recommend({ movie }) {
       try {
         console.log("Sending POST request for:", movie);
 
-        const res = await axios.post("http://localhost:5000/recommend", { movie });
+        const res = await axios.post("/recommend", { movie });
 
         if (typeof res.data === "string" && res.data.toLowerCase().includes("not found")) {
           setNotFound(true);
