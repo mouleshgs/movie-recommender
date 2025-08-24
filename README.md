@@ -1,6 +1,9 @@
 
 # Movie Recommender App
 
+<img width="1919" height="918" alt="image" src="https://github.com/user-attachments/assets/42cc3ac9-a56a-4897-a370-a597e6596824" />
+
+
 A simple **Movie Recommendation Web App** built with:
 - **Frontend:** React + Tailwind CSS
 - **Backend:** Flask (Python) + scikit-learn + pandas
